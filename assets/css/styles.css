@@ -38,6 +38,37 @@ body {
     overflow-x: hidden;
 }
 
+/* Skip Link - Hidden by default, visible on focus */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
@@ -79,6 +110,21 @@ a {
 
 a:hover {
     color: var(--teal);
+}
+
+a:focus {
+    outline: 3px solid var(--sage);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Enhanced focus styles for better keyboard navigation */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--sage);
+    outline-offset: 2px;
 }
 
 /* Layout Utilities */

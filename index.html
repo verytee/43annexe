@@ -19,12 +19,14 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Main Navigation">
         <div class="container-lg">
-            <a class="navbar-brand" href="#home">
-                <span class="brand-text">43 Annexe</span>
+            <a class="navbar-brand" href="#home" aria-label="43 Annexe - Home">
+                <span class="brand-text" aria-hidden="true">43 Annexe</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#accommodation">Accommodation</a>
@@ -49,15 +51,15 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
+    <section id="home" class="hero-section" aria-label="Welcome to 43 Annexe">
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="container-lg h-100 d-flex flex-column justify-content-center">
                 <div class="row">
                     <div class="col-lg-7">
                         <h1 class="hero-title">Your holiday by the Cornish North Coast</h1>
                         <p class="hero-subtitle">A studio holiday annexe in Crantock village, just a short walk from the beach.</p>
-                        <div class="divider"></div>
+                        <div class="divider" aria-hidden="true"></div>
                         <a href="#accommodation" class="btn btn-primary btn-lg">Book Your Stay</a>
                     </div>
                 </div>
@@ -66,30 +68,30 @@
     </section>
 
     <!-- Quick Features Bar -->
-    <section class="features-bar py-4">
+    <section class="features-bar py-4" aria-label="Key features of 43 Annexe">
         <div class="container-lg">
             <div class="row g-4 text-center">
                 <div class="col-6 col-md-3">
                     <div class="feature-bar-item">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-home" aria-hidden="true"></i>
                         <p class="mb-0">Seaside Accommodation</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="feature-bar-item">
-                        <i class="fas fa-water"></i>
+                        <i class="fas fa-water" aria-hidden="true"></i>
                         <p class="mb-0">Relax & Unwind</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="feature-bar-item">
-                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-leaf" aria-hidden="true"></i>
                         <p class="mb-0">Stunning Coastal Walks</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="feature-bar-item">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart" aria-hidden="true"></i>
                         <p class="mb-0">Local Pubs to Explore</p>
                     </div>
                 </div>
@@ -98,30 +100,31 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section py-80">
+    <section id="about" class="about-section py-80" aria-label="About 43 Annexe">
         <div class="container-lg">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <div class="about-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=600&h=500&fit=crop" alt="Comfortable lounge at 43 Annexe" class="img-fluid rounded-lg shadow-sm">
-                    </div>
+                    <figure class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=600&h=500&fit=crop" alt="Comfortable lounge at 43 Annexe with seating and coastal views" class="img-fluid rounded-lg shadow-sm">
+                        <figcaption class="sr-only">The comfortable lounge area at 43 Annexe holiday accommodation</figcaption>
+                    </figure>
                 </div>
                 <div class="col-lg-6">
                     <span class="section-label">About Us</span>
                     <h2 class="section-title">A Studio Holiday Annexe</h2>
                     <p class="section-text">Our studio holiday annexe is fully equipped for a comfortable stay. Whether you're here for long beach walks, exploring Cornwall, or simply switching off, you'll feel right at home.</p>
                     <p class="section-text mb-4">Each detail has been carefully chosen to create a peaceful sanctuary where you can truly unwind. From the cosy lounge to the private patio, every space invites you to slow down and enjoy the moment.</p>
-                    <div class="quote-text">
-                        <i class="fas fa-heart me-2"></i>
-                        Made memories by the sea
-                    </div>
+                    <blockquote class="quote-text" aria-label="Guest review">
+                        <i class="fas fa-heart me-2" aria-hidden="true"></i>
+                        <span>Made memories by the sea</span>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Accommodation Section -->
-    <section id="accommodation" class="accommodation-section py-80 bg-light">
+    <section id="accommodation" class="accommodation-section py-80 bg-light" aria-label="Accommodation details">
         <div class="container-lg">
             <div class="text-center mb-5">
                 <span class="section-label">Accommodation</span>
@@ -130,40 +133,44 @@
             
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
-                    <div class="accommodation-card">
-                        <img src="" alt="Living Area" class="img-fluid rounded-lg">
-                        <h4 class="mt-3">Comfortable Lounge</h4>
+                    <article class="accommodation-card">
+                        <img src="" alt="Comfortable lounge area with seating" class="img-fluid rounded-lg">
+                        <h3 class="mt-3">Comfortable Lounge</h3>
                         <p class="text-muted small">Relax with a book or enjoy evening entertainment</p>
-                    </div>
+                    </article>
                 </div>
                 <div class="col-md-4">
-                    <div class="accommodation-card">
-                        <img src="" alt="Bedroom" class="img-fluid rounded-lg">
-                        <h4 class="mt-3">Bedroom</h4>
+                    <article class="accommodation-card">
+                        <img src="" alt="Bedroom with quality bedding" class="img-fluid rounded-lg">
+                        <h3 class="mt-3">Bedroom</h3>
                         <p class="text-muted small">Peaceful rest with quality bedding</p>
-                    </div>
+                    </article>
                 </div>
                 <div class="col-md-4">
-                    <div class="accommodation-card">
-                        <img src="" alt="Private patio" class="img-fluid rounded-lg">
-                        <h4 class="mt-3">Private Patio</h4>
+                    <article class="accommodation-card">
+                        <img src="" alt="Private patio with seating" class="img-fluid rounded-lg">
+                        <h3 class="mt-3">Private Patio</h3>
                         <p class="text-muted small">Enjoy your morning coffee outside</p>
-                    </div>
+                    </article>
                 </div>
             </div>
 
             <div class="accommodation-info bg-white p-5 rounded-lg shadow-sm">
                 <div class="row text-center">
                     <div class="col-md-6 mb-3 mb-md-0">
-                        <h5 class="text-navy mb-2">What's Included</h5>
-                        <p class="mb-0"><i class="fas fa-check text-teal me-2"></i>Sleeps 2 guests</p>
-                        <p class="mb-0"><i class="fas fa-check text-teal me-2"></i>Free WiFi & Parking</p>
-                        <p class="mb-0"><i class="fas fa-check text-teal me-2"></i>Fully Self Catered</p>
+                        <h3 class="text-navy mb-2">What's Included</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-0"><i class="fas fa-check text-teal me-2" aria-hidden="true"></i><span>Sleeps 2 guests</span></li>
+                            <li class="mb-0"><i class="fas fa-check text-teal me-2" aria-hidden="true"></i><span>Free WiFi & Parking</span></li>
+                            <li class="mb-0"><i class="fas fa-check text-teal me-2" aria-hidden="true"></i><span>Fully Self Catered</span></li>
+                        </ul>
                     </div>
                     <div class="col-md-6">
-                        <h5 class="text-navy mb-2">Location</h5>
-                        <p class="mb-0"><i class="fas fa-map-marker-alt text-teal me-2"></i>Walking distance to Crantock Beach</p>
-                        <p class="mb-0"><i class="fas fa-clock text-teal me-2"></i>5 min walk to village shop & pubs</p>
+                        <h3 class="text-navy mb-2">Location</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-0"><i class="fas fa-map-marker-alt text-teal me-2" aria-hidden="true"></i><span>Walking distance to Crantock Beach</span></li>
+                            <li class="mb-0"><i class="fas fa-clock text-teal me-2" aria-hidden="true"></i><span>5 min walk to village shop & pubs</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -171,7 +178,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features-section py-80">
+    <section id="features" class="features-section py-80" aria-label="Why choose 43 Annexe">
         <div class="container-lg">
             <div class="text-center mb-5">
                 <span class="section-label">Why Choose Us</span>
@@ -180,99 +187,111 @@
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
                             <i class="fas fa-umbrella-beach"></i>
                         </div>
-                        <h4>Beach Nearby</h4>
+                        <h3>Beach Nearby</h3>
                         <p>Just a short walk from the stunning Crantock Beach. Perfect for swimming, surfing, or long peaceful walks.</p>
-                    </div>
+                    </article>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
                             <i class="fas fa-car"></i>
                         </div>
-                        <h4>Private Parking</h4>
+                        <h3>Private Parking</h3>
                         <p>Dedicated driveway parking included. No hassle finding a spot—everything is set up for your convenience.</p>
-                    </div>
+                    </article>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
                             <i class="fas fa-wifi"></i>
                         </div>
-                        <h4>Free WiFi</h4>
+                        <h3>Free WiFi</h3>
                         <p>Stay connected with high-speed WiFi throughout your stay. Work from the patio or browse at your own pace.</p>
-                    </div>
+                    </article>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
                             <i class="fas fa-utensils"></i>
                         </div>
-                        <h4>Self-Catering</h4>
+                        <h3>Self-Catering</h3>
                         <p>Fully equipped kitchen for preparing your own meals. Enjoy home-cooked comfort in a holiday setting.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section py-80 bg-navy text-white">
+    <section class="cta-section py-80 bg-navy text-white" aria-label="Call to action">
         <div class="container-lg text-center">
-            <h2 class="mb-4">Ready to book through <img src="assets/images/booking.webp" alt="booking.com">?</h2>
+            <h2 class="mb-4">Ready to book through <img src="assets/images/booking.webp" alt="Booking.com logo" class="booking-logo">?</h2>
             <p class="lead mb-5">Experience the peace and beauty of Crantock. Book your stay today.</p>
             <a href="#accommodation" class="btn btn-primary btn-lg">Book Your Stay</a>
         </div>
     </section>
 
     <!-- Contact/Footer Section -->
-    <footer id="contact" class="footer-section bg-dark text-white py-5">
+    <footer id="contact" class="footer-section bg-dark text-white py-5" aria-label="Site footer">
         <div class="container-lg">
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
-                    <h5 class="text-teal mb-3">43 Annexe</h5>
+                    <h2 class="text-teal mb-3">43 Annexe</h2>
                     <p>A self-catered studio holiday annexe in the village of Crantock, Cornwall. Your coastal holiday awaits.</p>
-                    <div class="social-links mt-3">
-                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
+                    <nav class="social-links mt-3" aria-label="Social media links">
+                        <a href="#" class="social-icon" aria-label="Visit 43 Annexe on Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Visit 43 Annexe on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:contact@43annexe.com" class="social-icon" aria-label="Send email to 43 Annexe">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </nav>
                 </div>
                 <div class="col-md-2">
-                    <h6 class="text-teal mb-3">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#home" class="footer-link">Home</a></li>
-                        <li><a href="#about" class="footer-link">About</a></li>
-                        <li><a href="#accommodation" class="footer-link">Accommodation</a></li>
-                        <li><a href="#features" class="footer-link">Features</a></li>
-                    </ul>
+                    <nav aria-label="Quick navigation links">
+                        <h3 class="text-teal mb-3">Quick Links</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#home" class="footer-link">Home</a></li>
+                            <li><a href="#about" class="footer-link">About</a></li>
+                            <li><a href="#accommodation" class="footer-link">Accommodation</a></li>
+                            <li><a href="#features" class="footer-link">Features</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="col-md-2">
-                    <h6 class="text-teal mb-3">Info</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="footer-link">Booking</a></li>
-                        <li><a href="#" class="footer-link">Cancellation</a></li>
-                        <li><a href="#" class="footer-link">Privacy</a></li>
-                        <li><a href="#" class="footer-link">Terms</a></li>
-                    </ul>
+                    <nav aria-label="Information links">
+                        <h3 class="text-teal mb-3">Info</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footer-link">Booking</a></li>
+                            <li><a href="#" class="footer-link">Cancellation</a></li>
+                            <li><a href="#" class="footer-link">Privacy</a></li>
+                            <li><a href="#" class="footer-link">Terms</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="col-md-4">
-                    <h6 class="text-teal mb-3">Get in Touch</h6>
-                    <p class="mb-2">
-                        <i class="fas fa-phone text-teal me-2"></i>
-                        <a href="tel:+441234567890" class="footer-link">+44 (0)phonehere</a>
-                    </p>
-                    <p class="mb-2">
-                        <i class="fas fa-envelope text-teal me-2"></i>
-                        <a href="emailhere" class="footer-link">emailhere</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-map-marker-alt text-teal me-2"></i>
-                        Crantock, Cornwall TR8 postcodehere
-                    </p>
+                    <h3 class="text-teal mb-3">Get in Touch</h3>
+                    <address>
+                        <p class="mb-2">
+                            <i class="fas fa-phone text-teal me-2" aria-hidden="true"></i>
+                            <a href="tel:+441234567890" class="footer-link">+44 (0)phonehere</a>
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-envelope text-teal me-2" aria-hidden="true"></i>
+                            <a href="mailto:contact@43annexe.com" class="footer-link">contact@43annexe.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker-alt text-teal me-2" aria-hidden="true"></i>
+                            Crantock, Cornwall TR8 postcodehere
+                        </p>
+                    </address>
                 </div>
             </div>
 
@@ -280,7 +299,7 @@
             
 
                   <div class="footer-bottom text-center">
-        <p>&copy; 2026 Made with love by <a class="footer-credit-link" href="https://verityallison.co.uk" rel="noopener noreferrer">Verity Allison</a> exclusively for 43 Annexe. All rights reserved.</p>
+        <p>&copy; 2026 Made with love by <a class="footer-credit-link" href="https://verityallison.co.uk" rel="noopener noreferrer" target="_blank">Verity Allison</a> exclusively for 43 Annexe. All rights reserved.</p>
       </div>
         </div>
     </footer>

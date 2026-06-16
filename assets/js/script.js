@@ -18,7 +18,7 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const sections = document.querySelectorAll('section');
 
-    // Smooth scroll for nav links
+    // Smooth scroll for nav links with accessibility announcement
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -40,6 +40,10 @@ function initNavigation() {
                         top: targetPosition,
                         behavior: 'smooth'
                     });
+                    
+                    // Update aria-current for accessibility
+                    navLinks.forEach(l => l.removeAttribute('aria-current'));
+                    this.setAttribute('aria-current', 'page');
                 }
             }
         });
@@ -57,9 +61,13 @@ function initNavigation() {
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
+            const href = link.getAttribute('href');
+            if (href === `#${current}`) {
                 link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
             }
         });
     });

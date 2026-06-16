@@ -4,117 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>43 Annexe</title>
+    <title>43 Annexe - Studio Holiday Accommodation in Crantock, Cornwall</title>
 
-<!-- Custom CSS -->
-<link rel="stylesheet" href="assets/css/styles.css">
-
-<!-- Bootstrap -->
-<link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  >
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     
-<!-- Navbar -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">43 Annexe</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-  <!-- Search Form -->
-    <form class="d-flex ms-3" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-</nav>
-
-<!-- Hero Section -->
-
-<header class="hero-section text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Welcome to 43 Annexe</h1>
-        <p class="lead">Holiday Accommodation in Crantock</p>
-        <a href="#" class="btn btn-primary btn-lg">Book Now</a>
-    </div>
-</header>
-
-<!-- About -->
-
-<section class="about-section py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">About Us</h2>
-        <p class="text-center">43 Annexe is a charming holiday accommodation located in Crantock.</p>
-    </div>
-</section>
-
-<!-- Accommodation and pictures -->
-
-<section class="accommodation-section py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Accommodation</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="assets/images/accommodation1.jpg" alt="Accommodation 1" class="img-fluid rounded mb-3">
-            </div>
-            <div class="col-md-6">
-                <img src="assets/images/accommodation2.jpg" alt="Accommodation 2" class="img-fluid rounded mb-3">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">43 Annexe</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accommodation">Accommodation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Local Area</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- About local area and map -->
-
-<section class="local-area-section py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Explore Crantock</h2>
-        <p class="text-center">Discover Crantock and its surroundings.</p>
-        <div class="map-container text-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.1234567890123!2d-5.123456789012345!3d50.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x0000000000000000!2sCrantock%20Beach%2C%20Newquay%2C%20UK!5e0!3m2!1sen!2sus!4v1234567890123" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container-lg h-100 d-flex flex-column justify-content-center">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h1 class="hero-title">Your holiday by the Cornish North Coast</h1>
+                        <p class="hero-subtitle">A studio holiday annexe in Crantock village, just a short walk from the beach.</p>
+                        <div class="divider"></div>
+                        <a href="#accommodation" class="btn btn-primary btn-lg">Book Your Stay</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-<!-- Footer -->
+    <!-- Quick Features Bar -->
+    <section class="features-bar py-4">
+        <div class="container-lg">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="feature-bar-item">
+                        <i class="fas fa-home"></i>
+                        <p class="mb-0">Seaside Accommodation</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feature-bar-item">
+                        <i class="fas fa-water"></i>
+                        <p class="mb-0">Relax & Unwind</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feature-bar-item">
+                        <i class="fas fa-leaf"></i>
+                        <p class="mb-0">Stunning Coastal Walks</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feature-bar-item">
+                        <i class="fas fa-heart"></i>
+                        <p class="mb-0">Local Pubs to Explore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="bg-light py-4">
-    <div class="container">
-        <p class="text-center">&copy; 2023 43 Annexe. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- About Section -->
+    <section id="about" class="about-section py-80">
+        <div class="container-lg">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=600&h=500&fit=crop" alt="Comfortable lounge at 43 Annexe" class="img-fluid rounded-lg shadow-sm">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">A Studio Holiday Annexe</h2>
+                    <p class="section-text">Our studio holiday annexe is fully equipped for a comfortable stay. Whether you're here for long beach walks, exploring Cornwall, or simply switching off, you'll feel right at home.</p>
+                    <p class="section-text mb-4">Each detail has been carefully chosen to create a peaceful sanctuary where you can truly unwind. From the cosy lounge to the private patio, every space invites you to slow down and enjoy the moment.</p>
+                    <div class="quote-text">
+                        <i class="fas fa-heart me-2"></i>
+                        Made memories by the sea
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Accommodation Section -->
+    <section id="accommodation" class="accommodation-section py-80 bg-light">
+        <div class="container-lg">
+            <div class="text-center mb-5">
+                <span class="section-label">Accommodation</span>
+                <h2 class="section-title">Your home away from home</h2>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="accommodation-card">
+                        <img src="" alt="Living Area" class="img-fluid rounded-lg">
+                        <h4 class="mt-3">Comfortable Lounge</h4>
+                        <p class="text-muted small">Relax with a book or enjoy evening entertainment</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="accommodation-card">
+                        <img src="" alt="Bedroom" class="img-fluid rounded-lg">
+                        <h4 class="mt-3">Bedroom</h4>
+                        <p class="text-muted small">Peaceful rest with quality bedding</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="accommodation-card">
+                        <img src="" alt="Private patio" class="img-fluid rounded-lg">
+                        <h4 class="mt-3">Private Patio</h4>
+                        <p class="text-muted small">Enjoy your morning coffee outside</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="accommodation-info bg-white p-5 rounded-lg shadow-sm">
+                <div class="row text-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h5 class="text-navy mb-2">What's Included</h5>
+                        <p class="mb-0"><i class="fas fa-check text-teal me-2"></i>Sleeps 2 guests</p>
+                        <p class="mb-0"><i class="fas fa-check text-teal me-2"></i>Free WiFi & Parking</p>
+                        <p class="mb-0"><i class="fas fa-check text-teal me-2"></i>Fully Self Catered</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-navy mb-2">Location</h5>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt text-teal me-2"></i>Walking distance to Crantock Beach</p>
+                        <p class="mb-0"><i class="fas fa-clock text-teal me-2"></i>5 min walk to village shop & pubs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Features Section -->
+    <section id="features" class="features-section py-80">
+        <div class="container-lg">
+            <div class="text-center mb-5">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">Everything you need for the perfect getaway</h2>
+            </div>
 
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h4>Beach Nearby</h4>
+                        <p>Just a short walk from the stunning Crantock Beach. Perfect for swimming, surfing, or long peaceful walks.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Private Parking</h4>
+                        <p>Dedicated driveway parking included. No hassle finding a spot—everything is set up for your convenience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4>Free WiFi</h4>
+                        <p>Stay connected with high-speed WiFi throughout your stay. Work from the patio or browse at your own pace.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Self-Catering</h4>
+                        <p>Fully equipped kitchen for preparing your own meals. Enjoy home-cooked comfort in a holiday setting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section py-80 bg-navy text-white">
+        <div class="container-lg text-center">
+            <h2 class="mb-4">Ready to book through <img src="assets/images/booking.webp" alt="booking.com">?</h2>
+            <p class="lead mb-5">Experience the peace and beauty of Crantock. Book your stay today.</p>
+            <a href="#accommodation" class="btn btn-primary btn-lg">Book Your Stay</a>
+        </div>
+    </section>
 
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="footer-section bg-dark text-white py-5">
+        <div class="container-lg">
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <h5 class="text-teal mb-3">43 Annexe</h5>
+                    <p>A self-catered studio holiday annexe in the village of Crantock, Cornwall. Your coastal holiday awaits.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-teal mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#accommodation" class="footer-link">Accommodation</a></li>
+                        <li><a href="#features" class="footer-link">Features</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-teal mb-3">Info</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Booking</a></li>
+                        <li><a href="#" class="footer-link">Cancellation</a></li>
+                        <li><a href="#" class="footer-link">Privacy</a></li>
+                        <li><a href="#" class="footer-link">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-teal mb-3">Get in Touch</h6>
+                    <p class="mb-2">
+                        <i class="fas fa-phone text-teal me-2"></i>
+                        <a href="tel:+441234567890" class="footer-link">+44 (0)phonehere</a>
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope text-teal me-2"></i>
+                        <a href="emailhere" class="footer-link">emailhere</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt text-teal me-2"></i>
+                        Crantock, Cornwall TR8 postcodehere
+                    </p>
+                </div>
+            </div>
 
-<script src="assets/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+            <hr class="border-secondary">
+            
+
+                  <div class="footer-bottom text-center">
+        <p>&copy; 2026 Made with love by <a class="footer-credit-link" href="https://verityallison.co.uk" rel="noopener noreferrer">Verity Allison</a> exclusively for 43 Annexe. All rights reserved.</p>
+      </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,810 @@
+/* ============================================
+   43 ANNEXE - COASTAL RETREAT WEBSITE
+   ============================================ */
+
+/* Color Palette */
+:root {
+    --navy: #003b5c;
+    --teal: #005b5c;
+    --ocean: #007a8e;
+    --sage: #a8d8b9;
+    --mist: #e0f7fa;
+    --text: #243444;
+    --light-text: #666666;
+    --white: #ffffff;
+    --bg-light: #f8fbfc;
+    --dark: #1a2d3d;
+    --shadow-sm: 0 2px 8px rgba(0, 59, 92, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 59, 92, 0.12);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--light-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--ocean);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--teal);
+}
+
+/* Layout Utilities */
+.container-lg {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.py-80 {
+    padding: 5rem 0;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--ocean), var(--sage));
+    margin: 2rem 0;
+    display: block;
+}
+
+/* Section Labels & Titles */
+.section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ocean);
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    color: var(--navy);
+    margin-bottom: 2rem;
+}
+
+.section-text {
+    font-size: 1.05rem;
+    color: var(--light-text);
+    line-height: 1.8;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(0, 91, 92, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar.sticky-top {
+    z-index: 999;
+}
+
+.brand-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text) !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--ocean);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 91, 92, 0.3), rgba(0, 122, 142, 0.2)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1500&h=900&fit=crop') center/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    color: var(--navy);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: slideUpFade 0.8s ease 0.2s both;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text);
+    max-width: 500px;
+    margin-bottom: 2rem;
+    animation: slideUpFade 0.8s ease 0.4s both;
+}
+
+.hero-section .divider {
+    animation: slideLeftFade 0.8s ease 0.6s both;
+}
+
+.hero-section .btn {
+    animation: slideUpFade 0.8s ease 0.8s both;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    padding: 0.875rem 2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--ocean);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--teal);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--navy);
+    border-color: var(--white);
+}
+
+.btn-light:hover {
+    background: var(--mist);
+    color: var(--ocean);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+}
+
+/* ============================================
+   FEATURES BAR
+   ============================================ */
+
+.features-bar {
+    background: var(--bg-light);
+    border-bottom: 1px solid rgba(0, 91, 92, 0.1);
+}
+
+.feature-bar-item {
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.feature-bar-item i {
+    font-size: 1.75rem;
+    color: var(--ocean);
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+}
+
+.feature-bar-item p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.feature-bar-item:hover {
+    transform: translateY(-4px);
+}
+
+.feature-bar-item:hover i {
+    color: var(--teal);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about-section {
+    background: var(--white);
+}
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-image-wrapper img {
+    transition: var(--transition);
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--ocean);
+    font-style: italic;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--mist);
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+/* ============================================
+   ACCOMMODATION SECTION
+   ============================================ */
+
+.accommodation-section {
+    background: var(--bg-light);
+}
+
+.accommodation-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accommodation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.accommodation-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.accommodation-card:hover img {
+    transform: scale(1.08);
+}
+
+.accommodation-card h4 {
+    color: var(--navy);
+    padding: 1.5rem 1.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.accommodation-card p {
+    padding: 0 1.5rem 1.5rem;
+    margin-bottom: 0;
+}
+
+.accommodation-info {
+    margin-top: 4rem;
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.5), rgba(168, 216, 185, 0.3));
+}
+
+.accommodation-info h5 {
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.accommodation-info p {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+
+.features-section {
+    background: var(--white);
+}
+
+.feature-card {
+    background: var(--white);
+    border: 2px solid var(--mist);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ocean), var(--sage));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--sage);
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.4), rgba(168, 216, 185, 0.2));
+    transform: translateY(-8px);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--ocean);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.feature-card:hover .feature-icon {
+    color: var(--teal);
+    transform: scale(1.2);
+}
+
+.feature-card h4 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.feature-card p {
+    margin-bottom: 0;
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.cta-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--ocean) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(168, 216, 185, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.cta-section .lead {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.15rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+    color: var(--white);
+}
+
+.footer-section h5,
+.footer-section h6 {
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.text-teal {
+    color: var(--sage) !important;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-link:hover {
+    color: var(--sage);
+    padding-left: 4px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.social-icon:hover {
+    background: var(--ocean);
+    border-color: var(--sage);
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeftFade {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 60px;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll Animation Trigger */
+.animate-on-scroll {
+    opacity: 0;
+    animation: slideInUp 0.8s ease forwards;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .py-80 {
+        padding: 3rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section {
+        min-height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .feature-bar-item {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .feature-bar-item i {
+        font-size: 1.5rem;
+    }
+
+    .feature-bar-item p {
+        font-size: 0.8rem;
+    }
+
+    .accommodation-card img {
+        height: 200px;
+    }
+
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .feature-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .quote-text {
+        font-size: 1.25rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .cta-section::before {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-lg {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .py-80 {
+        padding: 2rem 0;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+    }
+
+    .hero-section {
+        min-height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .divider {
+        width: 40px;
+        margin: 1.5rem 0;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .feature-bar-item {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .feature-bar-item i {
+        font-size: 1.25rem;
+    }
+
+    .feature-bar-item p {
+        font-size: 0.75rem;
+    }
+
+    .accommodation-card img {
+        height: 150px;
+    }
+
+    .accommodation-card h4 {
+        padding: 1rem 1rem 0.25rem;
+        font-size: 1.1rem;
+    }
+
+    .accommodation-card p {
+        padding: 0 1rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .quote-text {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .footer-section {
+        padding: 3rem 0;
+    }
+
+    .footer-section .row {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

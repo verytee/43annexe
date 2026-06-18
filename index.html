@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>43 Annexe - Studio Holiday Accommodation in Crantock, Cornwall</title>
+        <title>43 The Annexe — Studio Holiday Accommodation in Crantock, Cornwall</title>
+    <meta name="description" content="A self-catered studio holiday annexe in Crantock village, Cornwall. A short walk to Crantock Beach, village pubs and the South West Coast Path.">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,8 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -23,342 +26,423 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Main Navigation">
-        <div class="container-lg">
-            <a class="navbar-brand" href="#home" aria-label="43 Annexe - Home">
-                <span class="brand-text" aria-hidden="true">43 Annexe</span>
+    <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main Navigation" data-testid="main-nav">
+        <div class="container-xl">
+            <a class="navbar-brand" href="#home" data-testid="nav-brand">
+                <span class="brand-mark">43</span>
+                <span class="brand-text">The Annexe<small> Crantock · Cornwall</small></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation" data-testid="nav-toggle">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#accommodation">Accommodation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Local Area</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home" data-testid="nav-home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-testid="nav-about">The Annexe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery" data-testid="nav-gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#crantock" data-testid="nav-crantock">Crantock Village</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cornwall" data-testid="nav-cornwall">Cornwall</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location" data-testid="nav-location">Find Us</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-coast" href="https://www.booking.com/hotel/gb/annexe-newquay.en-gb.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaFCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvbKlNEGwAIB0gIkMTllMDEwNTEtNzUzOC00YzM4LWFhMjYtMmVkYzA3ZmVjNTMw2AIB4AIB&sid=0f90560e0f00d450f8a133c688f1a371&all_sr_blocks=712831001_298141050_2_0_0&checkin=2026-10-08&checkout=2026-10-11&dest_id=-2604050&dest_type=city&group_adults=2&group_children=0&hapos=21&highlighted_blocks=712831001_298141050_2_0_0&hpos=21&keep_landing=1&matching_block_id=712831001_298141050_2_0_0&nflt=ht_id%3D201&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=712831001_298141050_2_0_0__21600&srepoch=1780819205&srpvid=77b4388f3e5f010b&type=total&ucfs=1&chal_t=1781803374442&force_referer=" target="_blank" data-testid="nav-book">Book a Stay</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section" style="background-image: linear-gradient(135deg, rgba(0, 91, 92, 0.4), rgba(0, 122, 142, 0.25)), url('assets/images/studiobright.webp');" aria-label="Welcome to 43 Annexe">
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="container-lg h-100 d-flex flex-column justify-content-center">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <h1 class="hero-title">Your holiday by the Cornish North Coast</h1>
-                        <p class="hero-subtitle">A studio holiday annexe in Crantock village, just a short walk from the beach.</p>
-                        <div class="divider" aria-hidden="true"></div>
-                        <a href="#accommodation" class="btn btn-primary btn-lg">Book Your Stay</a>
+   <section id="home" class="hero" aria-label="Welcome to 43 The Annexe" data-testid="hero-section">
+        <div class="hero-bg" style="background-image: url('assets/images/crantock.webp');" aria-hidden="true"></div>
+        <div class="hero-tint" aria-hidden="true"></div>
+        <div class="hero-grain" aria-hidden="true"></div>
+
+        <div class="container-xl hero-inner">
+            <div class="row align-items-end">
+                <div class="col-lg-9">
+                    <p class="eyebrow eyebrow-light" data-testid="hero-eyebrow">Crantock, Cornwall TR8 5RY</p>
+                    <h1 class="hero-title"><em>Welcome to</em> <span class="brand-mark-light">43</span> <em>The Annexe</em></h1>
+                    <p class="hero-lead">A self-catered annexe in Crantock village </p>
+                    <div class="hero-actions">
+                        <a href="https://www.booking.com/hotel/gb/annexe-newquay.en-gb.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaFCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvbKlNEGwAIB0gIkMTllMDEwNTEtNzUzOC00YzM4LWFhMjYtMmVkYzA3ZmVjNTMw2AIB4AIB&sid=0f90560e0f00d450f8a133c688f1a371&all_sr_blocks=712831001_298141050_2_0_0&checkin=2026-10-08&checkout=2026-10-11&dest_id=-2604050&dest_type=city&group_adults=2&group_children=0&hapos=21&highlighted_blocks=712831001_298141050_2_0_0&hpos=21&keep_landing=1&matching_block_id=712831001_298141050_2_0_0&nflt=ht_id%3D201&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=712831001_298141050_2_0_0__21600&srepoch=1780819205&srpvid=77b4388f3e5f010b&type=total&ucfs=1&chal_t=1781803374442&force_referer=" target="_blank" class="btn btn-coast btn-lg" data-testid="hero-cta-book">Check Availability</a>
+                        <a href="#gallery" class="btn btn-ghost-light btn-lg" data-testid="hero-cta-gallery">View the Studio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-meta">
+                <div class="hero-meta-item"><span>01</span><p>Self-catering</p></div>
+                <div class="hero-meta-item"><span>02</span><p>Sleeps two</p></div>
+                <div class="hero-meta-item"><span>03</span><p>Walk to beach</p></div>
+                <div class="hero-meta-item"><span>04</span><p>Private patio</p></div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- ============== ABOUT THE STUDIO ============== -->
+    <section id="about" class="section section-about" aria-label="About the studio" data-testid="about-section">
+        <div class="container-xl">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="image-stack">
+                        <figure class="image-stack-main">
+                            <img src="assets/images/studiobright.webp" alt="The sleeping area of 43 The Annexe with outside view" loading="lazy">
+                        </figure>
+                        <figure class="image-stack-accent">
+                            <img src="assets/images/patio.webp" alt="The private patio of 43 The Annexe with firepit" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <p class="eyebrow">The Studio</p>
+                    <h2 class="section-title">A simple, comfortable holiday by the sea.</h2>
+                    <p class="lead-text">43 The Annexe is a thoughtfully kept studio with everything you need for an easy Cornish getaway. Cook a slow breakfast, take the lane down to the beach, come back salty and sleepy and put the kettle on.</p>
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <i class="fas fa-bed" aria-hidden="true"></i>
+                            <div><h6>Sleeps two</h6><p>A comfortable king sized bed for restful nights after long beach days.</p></div>
+                        </div>
+                        <div class="feature-list-item">
+                            <i class="fas fa-mug-hot" aria-hidden="true"></i>
+                            <div><h6>Fully equipped kitchen</h6><p>Self-catering with everything you need including tea, coffee and milk on arrival.</p></div>
+                        </div>
+                        <div class="feature-list-item">
+                            <i class="fas fa-wifi" aria-hidden="true"></i>
+                            <div><h6>Wi-Fi & parking</h6><p>Free fast Wi-Fi throughout and reserved off-street parking.</p></div>
+                        </div>
+                        <div class="feature-list-item">
+                            <i class="fas fa-seedling" aria-hidden="true"></i>
+                            <div><h6>Private patio</h6><p>A sheltered outdoor spot for morning coffee or a glass of something stronger in front of the firepit in the evening.</p></div>
+                        </div>
+                                         <div class="feature-list-item">
+                            <i class="fas fa-fan" aria-hidden="true"></i>
+                            <div><h6>Air conditioning</h6><p>Both hot and cold air conditioning for your comfort.</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Features Bar -->
-    <section class="features-bar py-4" aria-label="Key features of 43 Annexe">
-        <div class="container-lg">
-            <div class="row g-4 text-center">
-                <div class="col-6 col-md-3">
-                    <div class="feature-bar-item">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        <p class="mb-0">Seaside Accommodation</p>
+    <!-- ============== GALLERY CAROUSEL ============== -->
+    <section id="gallery" class="section section-gallery" aria-label="Photo gallery" data-testid="gallery-section">
+        <div class="container-xl">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-8">
+                    <p class="eyebrow">Inside the Annexe</p>
+                    <h2 class="section-title m-0">A look around the studio.</h2>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <p class="muted m-0">Browse our gallery by swiping, clicking or simply letting it play.</p>
+                </div>
+            </div>
+
+            <div id="annexeCarousel" class="carousel carousel-dark slide annexe-carousel" data-bs-ride="carousel" data-bs-interval="5000" data-testid="annexe-carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#annexeCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/studiobright.webp" class="d-block w-100" alt="Bright studio interior at 43 The Annexe">
+                        <div class="carousel-caption"><span class="caption-num">01 / 08</span><h3>The Studio</h3><p>Bright, open and welcoming space.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/studio.webp" class="d-block w-100" alt="Comfortable lounge seating">
+                        <div class="carousel-caption"><span class="caption-num">02 / 08</span><h3>Studio</h3><p>Comfortable space for relaxing and unwinding.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/studiotv.webp" class="d-block w-100" alt="Lounge with television area">
+                        <div class="carousel-caption"><span class="caption-num">03 / 08</span><h3>Spacious Living Area</h3><p>Enjoy the comfort of a sofa, television and modern amenities.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/kitchen.webp" class="d-block w-100" alt="Fully equipped kitchen">
+                        <div class="carousel-caption"><span class="caption-num">04 / 08</span><h3>Kitchen</h3><p>Everything you need to cook in.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/kitchenbar.webp" class="d-block w-100" alt="Kitchen breakfast bar">
+                        <div class="carousel-caption"><span class="caption-num">05 / 08</span><h3>Breakfast Bar</h3><p>Slow mornings, strong coffee.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/shower.webp" class="d-block w-100" alt="Modern shower room">
+                        <div class="carousel-caption"><span class="caption-num">06 / 08</span><h3>Shower Room</h3><p>Fresh, modern and warm underfoot.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/patio.webp" class="d-block w-100" alt="Private patio with seating">
+                        <div class="carousel-caption"><span class="caption-num">07 / 08</span><h3>Patio</h3><p>Sun-trap mornings, golden evenings.</p></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/patio2.webp" class="d-block w-100" alt="Outdoor patio space at the annexe">
+                        <div class="carousel-caption"><span class="caption-num">08 / 08</span><h3>Outdoor Living</h3><p>A quiet corner of Crantock to call yours.</p></div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="feature-bar-item">
-                        <i class="fas fa-water" aria-hidden="true"></i>
-                        <p class="mb-0">Relax & Unwind</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="feature-bar-item">
-                        <i class="fas fa-leaf" aria-hidden="true"></i>
-                        <p class="mb-0">Stunning Coastal Walks</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="feature-bar-item">
-                        <i class="fas fa-heart" aria-hidden="true"></i>
-                        <p class="mb-0">Local Pubs to Explore</p>
-                    </div>
-                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#annexeCarousel" data-bs-slide="prev" data-testid="carousel-prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#annexeCarousel" data-bs-slide="next" data-testid="carousel-next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section py-80" aria-label="About 43 Annexe">
-        <div class="container-lg">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <figure class="about-image-wrapper">
-                        <img src="assets/images/studio.webp" alt="Comfortable lounge at 43 Annexe with seating and coastal views" class="img-fluid rounded-lg shadow-sm">
-                        <figcaption class="sr-only">The comfortable lounge area at 43 Annexe holiday accommodation</figcaption>
-                    </figure>
-                </div>
-                <div class="col-lg-6">
-                    <span class="section-label">About Us</span>
-                    <h2 class="section-title">A Studio Holiday Annexe</h2>
-                    <p class="section-text">Our studio holiday annexe is fully equipped for a comfortable stay. Whether you're here for long beach walks, exploring Cornwall, or simply switching off, you'll feel right at home.</p>
-                    <p class="section-text mb-4">Each detail has been carefully chosen to create a peaceful sanctuary where you can truly unwind. From the cosy lounge to the private patio, every space invites you to slow down and enjoy the moment.</p>
-                    <blockquote class="quote-text" aria-label="Guest review">
-                        <i class="fas fa-heart me-2" aria-hidden="true"></i>
-                        <span>Made memories by the sea</span>
+    <!-- ============== WHAT'S INCLUDED ============== -->
+    <section class="section section-included" aria-label="What's included" data-testid="included-section">
+        <div class="container-xl">
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <p class="eyebrow">What's Included</p>
+                    <h2 class="section-title">Settled in within minutes of arrival.</h2>
+                    <p class="muted">A thoughtfully stocked studio so you can leave the to-do list at the door. From fresh linen to free parking, the small things are taken care of.</p>
+                    <blockquote class="pull-quote">
+                        <i class="fas fa-quote-left" aria-hidden="true"></i>
+                        <p>"Made memories by the sea."</p>
                     </blockquote>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Accommodation Section -->
-    <section id="accommodation" class="accommodation-section py-80 bg-light" aria-label="Accommodation details">
-        <div class="container-lg">
-            <div class="text-center mb-5">
-                <span class="section-label">Accommodation</span>
-                <h2 class="section-title">Your home away from home</h2>
-            </div>
-            
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <article class="accommodation-card">
-                        <img src="assets/images/studiotv.webp" alt="Comfortable lounge area with seating and entertainment" class="img-fluid rounded-lg">
-                        <h3 class="mt-3">Comfortable Lounge</h3>
-                        <p class="text-muted small">Relax with a book or enjoy evening entertainment</p>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="accommodation-card">
-                        <img src="assets/images/shower.webp" alt="Modern bedroom and bathroom with quality bedding" class="img-fluid rounded-lg">
-                        <h3 class="mt-3">Bedroom</h3>
-                        <p class="text-muted small">Peaceful rest with quality bedding</p>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="accommodation-card">
-                        <img src="assets/images/patio.webp" alt="Private patio with seating" class="img-fluid rounded-lg">
-                        <h3 class="mt-3">Private Patio</h3>
-                        <p class="text-muted small">Enjoy your morning coffee outside</p>
-                    </article>
-                </div>
-            </div>
-
-            <div class="accommodation-info bg-white p-5 rounded-lg shadow-sm">
-                <div class="row text-center">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                        <h3 class="text-navy mb-2">What's Included</h3>
-                        <ul class="list-unstyled">
-                            <li class="mb-0"><i class="fas fa-check text-teal me-2" aria-hidden="true"></i><span>Sleeps 2 guests</span></li>
-                            <li class="mb-0"><i class="fas fa-check text-teal me-2" aria-hidden="true"></i><span>Free WiFi & Parking</span></li>
-                            <li class="mb-0"><i class="fas fa-check text-teal me-2" aria-hidden="true"></i><span>Fully Self Catered</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h3 class="text-navy mb-2">Location</h3>
-                        <ul class="list-unstyled">
-                            <li class="mb-0"><i class="fas fa-map-marker-alt text-teal me-2" aria-hidden="true"></i><span>Walking distance to Crantock Beach</span></li>
-                            <li class="mb-0"><i class="fas fa-clock text-teal me-2" aria-hidden="true"></i><span>5 min walk to village shop & pubs</span></li>
-                        </ul>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-bed"></i><span>Double bed, fresh linen</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-shower"></i><span>Private shower room</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-utensils"></i><span>Fully equipped kitchen</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-wifi"></i><span>Free fast Wi-Fi</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-car"></i><span>Off-street parking</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-tv"></i><span>Smart TV & streaming</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-temperature-low"></i><span>Heating throughout</span></div></div>
+                        <div class="col-sm-6"><div class="chip-card"><i class="fas fa-leaf"></i><span>Private outdoor patio</span></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Amenities Gallery Section -->
-    <section class="amenities-gallery py-80 bg-white" aria-label="Studio amenities gallery">
-        <div class="container-lg">
-            <div class="text-center mb-5">
-                <span class="section-label">Studio Amenities</span>
-                <h2 class="section-title">Thoughtfully Designed Spaces</h2>
+    <!-- ============== CRANTOCK VILLAGE ============== -->
+    <section id="crantock" class="section section-crantock" aria-label="About Crantock" data-testid="crantock-section">
+        <div class="container-xl">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <p class="eyebrow">The Village</p>
+                    <h2 class="section-title">Crantock near Newquay</h2>
+                    <p>Crantock is a small, conservation-area village on Cornwall's north coast, and across the Gannel Estuary from Newquay. Whitewashed cottages, a 13th-century church, and lanes that lead, inevitably, to the ocean.</p>
+                    <p>At its heart sit two much-loved pubs — <strong>The Bowgie Inn</strong> with its clifftop view over Crantock Bay, and the village's own <strong>Old Albion</strong>, a thatched, low-beamed local serving honest Cornish pints since the 1700s.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6"><div class="info-tile info-tile-tall"><h6>Crantock Beach</h6><p>A wide, west-facing beach backed by dunes, sheltered by Pentire Head. Famous for the sand-carved "Joseph Prater" cave poem and the meandering Gannel river.</p><span class="info-tag">5 min walk</span></div></div>
+                        <div class="col-6 d-flex flex-column gap-3">
+                            
+                            <div class="info-tile"><h6>Village Shop</h6><p>Coffee, newspapers, Cornish pasties.</p><span class="info-tag">3 min walk</span></div>
+                            <div class="info-tile"><h6>The Old Albion</h6><p>A historic freehold pub serving great food and drink all year round.</p><span class="info-tag">4 min walk</span></div>
+                        <div class="info-tile"><h6>St Carantoc's</h6><p>13th-century church at the village centre.</p><span class="info-tag">5 min walk</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="assets/images/kitchen.webp" alt="Modern fully equipped kitchen" class="img-fluid rounded-lg">
-                        <div class="gallery-overlay">
-                            <h4>Fully Equipped Kitchen</h4>
-                        </div>
+
+            <hr class="soft-rule">
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="story-card">
+                        <span class="story-num">01</span>
+                        <h5>The Gannel Estuary</h5>
+                        <p>At low tide, walk the tidal footbridge across the Gannel to Crantock Beach — one of Cornwall's most quietly beautiful crossings.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="assets/images/kitchenbar.webp" alt="Breakfast bar in the kitchen" class="img-fluid rounded-lg">
-                        <div class="gallery-overlay">
-                            <h4>Dining Area</h4>
-                        </div>
+                <div class="col-md-4">
+                    <div class="story-card">
+                        <span class="story-num">02</span>
+                        <h5>The Cave Poem</h5>
+                        <p>Hidden at the cliffs of Piper's Hole on Crantock Beach: a love poem and carved horse, etched in 1940 by a heartbroken Joseph Prater.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="assets/images/sinktowels.webp" alt="Modern bathroom with fresh towels" class="img-fluid rounded-lg">
-                        <div class="gallery-overlay">
-                            <h4>Bathroom</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="assets/images/patio2.webp" alt="Outdoor patio space for relaxation" class="img-fluid rounded-lg">
-                        <div class="gallery-overlay">
-                            <h4>Outdoor Space</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="assets/images/studio2.webp" alt="Additional view of the studio interior" class="img-fluid rounded-lg">
-                        <div class="gallery-overlay">
-                            <h4>Studio View</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="gallery-item">
-                        <img src="assets/images/studio3.webp" alt="Another view showcasing the comfort" class="img-fluid rounded-lg">
-                        <div class="gallery-overlay">
-                            <h4>Comfortable Setting</h4>
-                        </div>
+                <div class="col-md-4">
+                    <div class="story-card">
+                        <span class="story-num">03</span>
+                        <h5>Surf, Walk, Repeat</h5>
+                        <p>The South West Coast Path runs right through. West to Polly Joke and Holywell, east to Pentire Point and Fistral.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section py-80" aria-label="Why choose 43 Annexe">
-        <div class="container-lg">
+    <!-- ============== WIDER CORNWALL ============== -->
+    <section id="cornwall" class="section section-cornwall" aria-label="Exploring Cornwall" data-testid="cornwall-section">
+        <div class="container-xl">
             <div class="text-center mb-5">
-                <span class="section-label">Why Choose Us</span>
-                <h2 class="section-title">Everything you need for the perfect getaway</h2>
+                <p class="eyebrow eyebrow-light">Beyond the Village</p>
+                <h2 class="section-title text-white">Cornwall, in every direction.</h2>
+                <p class="section-sub text-white-70">Crantock sits perfectly between Cornwall's surf coast and her hidden inland valleys. A 30-minute drive opens up most of the duchy.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <i class="fas fa-umbrella-beach"></i>
-                        </div>
-                        <h3>Beach Nearby</h3>
-                        <p>Just a short walk from the stunning Crantock Beach. Perfect for swimming, surfing, or long peaceful walks.</p>
+                    <article class="dest-card" data-testid="dest-newquay">
+                        <span class="dest-distance">3 miles</span>
+                        <h4>Newquay</h4>
+                        <p>Fistral surf, Blue Reef Aquarium and harbour-front fish & chips all found in this seaside town.</p>
                     </article>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <h3>Private Parking</h3>
-                        <p>Dedicated driveway parking included. No hassle finding a spot—everything is set up for your convenience.</p>
+                    <article class="dest-card" data-testid="dest-padstow">
+                        <span class="dest-distance">14 miles</span>
+                        <h4>Padstow</h4>
+                        <p>Rick Stein's seafood town, the Camel Trail and a ferry across to Rock.</p>
                     </article>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <h3>Free WiFi</h3>
-                        <p>Stay connected with high-speed WiFi throughout your stay. Work from the patio or browse at your own pace.</p>
+                    <article class="dest-card" data-testid="dest-stives">
+                        <span class="dest-distance">28 miles</span>
+                        <h4>St Ives</h4>
+                        <p>White sands, Tate St Ives, cobbled artist lanes and the Barbara Hepworth Garden.</p>
                     </article>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <h3>Self-Catering</h3>
-                        <p>Fully equipped kitchen for preparing your own meals. Enjoy home-cooked comfort in a holiday setting.</p>
+                    <article class="dest-card" data-testid="dest-eden">
+                        <span class="dest-distance">25 miles</span>
+                        <h4>Eden Project</h4>
+                        <p>The world-famous biomes near St Austell with the rainforest and Mediterranean in one location.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="dest-card" data-testid="dest-bedruthan">
+                        <span class="dest-distance">8 miles</span>
+                        <h4>Bedruthan Steps</h4>
+                        <p>The dramatic stack-strewn beach the giants of Cornish legend used as stepping stones.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="dest-card" data-testid="dest-truro">
+                        <span class="dest-distance">15 miles</span>
+                        <h4>Truro</h4>
+                        <p>Cornwall's cathedral city with independent shops, Lemon Street Market, Hall for Cornwall, and Cornwall Museum and Art Gallery.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="dest-card" data-testid="dest-tintagel">
+                        <span class="dest-distance">26 miles</span>
+                        <h4>Tintagel</h4>
+                        <p>Atlantic cliffs, an Arthurian castle and the legend of the north coast.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="dest-card" data-testid="dest-lostlands">
+                        <span class="dest-distance">12 miles</span>
+                        <h4>Lost Gardens of Heligan</h4>
+                        <p>Restored Victorian gardens with jungle valleys, productive gardens and a sleeping giant.</p>
                     </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section py-80 bg-navy text-white" aria-label="Call to action">
-        <div class="container-lg text-center">
-            <h2 class="mb-4">Ready to book through <img src="assets/images/booking.webp" alt="Booking.com logo" class="booking-logo">?</h2>
-            <p class="lead mb-5">Experience the peace and beauty of Crantock. Book your stay today.</p>
-            <a href="#accommodation" class="btn btn-primary btn-lg">Book Your Stay</a>
+    <!-- ============== LOCATION / MAP ============== -->
+    <section id="location" class="section section-location" aria-label="Find us" data-testid="location-section">
+        <div class="container-xl">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <p class="eyebrow">Find Us</p>
+                    <h2 class="section-title">43 The Annexe, TR8 5RY.</h2>
+                    <p>Tucked into a quiet residential lane in the heart of Crantock village. The pin on the map marks our front door — beach, pubs and the village shop are all an easy stroll from here.</p>
+                    <address class="address-block">
+                        <p><i class="fas fa-map-marker-alt"></i> 43 The Annexe, Crantock, Cornwall, <strong>TR8 5RY</strong></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+447729735861">+44 (0)7729 735 861</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:alexandwill56@gmail.com">alexandwill56@gmail.com</a></p>
+                    </address>
+                    <div class="travel-grid">
+                        <div><strong>By car</strong><span>A30 → A3075 → Crantock. 4½ hours from London.</span></div>
+                        <div><strong>By train</strong><span>Newquay station (5 miles), direct from London Paddington.</span></div>
+                        <div><strong>By air</strong><span>Cornwall Airport Newquay — 8 miles.</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="map-wrap" data-testid="map-wrap">
+                        <iframe
+                            title="Map showing 43 The Annexe, Crantock, TR8 5RY"
+                            src="https://www.google.com/maps?q=43+The+Annexe,+TR8+5RY&zoom=17&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact/Footer Section -->
-    <footer id="contact" class="footer-section bg-dark text-white py-5" aria-label="Site footer">
-        <div class="container-lg">
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <h2 class="text-teal mb-3">43 Annexe</h2>
-                    <p>A self-catered studio holiday annexe in the village of Crantock, Cornwall. Your coastal holiday awaits.</p>
-                    <nav class="social-links mt-3" aria-label="Social media links">
-                        <a href="#" class="social-icon" aria-label="Visit 43 Annexe on Facebook">
-                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Visit 43 Annexe on Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="mailto:contact@43annexe.com" class="social-icon" aria-label="Send email to 43 Annexe">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                        </a>
-                    </nav>
+    <!-- ============== CTA ============== -->
+    <section id="contact" class="section section-cta" aria-label="Book your stay" data-testid="cta-section">
+        <div class="container-xl">
+            <div class="cta-card">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <p class="eyebrow eyebrow-light">Ready when you are</p>
+                        <h2 class="cta-title">Book your Crantock escape.</h2>
+                        <p class="cta-sub">Direct messages warmly welcomed or book us through Booking.com for an instant confirmation.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+    <a class="btn btn-coast" href="https://www.booking.com/hotel/gb/annexe-newquay.en-gb.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaFCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvbKlNEGwAIB0gIkMTllMDEwNTEtNzUzOC00YzM4LWFhMjYtMmVkYzA3ZmVjNTMw2AIB4AIB&sid=0f90560e0f00d450f8a133c688f1a371&all_sr_blocks=712831001_298141050_2_0_0&checkin=2026-10-08&checkout=2026-10-11&dest_id=-2604050&dest_type=city&group_adults=2&group_children=0&hapos=21&highlighted_blocks=712831001_298141050_2_0_0&hpos=21&keep_landing=1&matching_block_id=712831001_298141050_2_0_0&nflt=ht_id%3D201&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=712831001_298141050_2_0_0__21600&srepoch=1780819205&srpvid=77b4388f3e5f010b&type=total&ucfs=1&chal_t=1781803374442&force_referer=" target="_blank" data-testid="nav-book">Book a Stay</a>
+                        <a href="mailto:alexandwill56@gmail.com?subject=43%20The%20Annexe%20Enquiry" class="btn btn-ghost-light btn-lg" data-testid="cta-email">Email Us</a>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <nav aria-label="Quick navigation links">
-                        <h3 class="text-teal mb-3">Quick Links</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#home" class="footer-link">Home</a></li>
-                            <li><a href="#about" class="footer-link">About</a></li>
-                            <li><a href="#accommodation" class="footer-link">Accommodation</a></li>
-                            <li><a href="#features" class="footer-link">Features</a></li>
-                        </ul>
-                    </nav>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="site-footer" id="footer" data-testid="footer">
+        <div class="container-xl">
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <h3 class="footer-brand">43 The Annexe</h3>
+                    <p>A self-catered studio holiday annexe in the village of Crantock, Cornwall. Your quiet corner of the north coast.</p>
+                    <div class="social-row">
+                        <a href="mailto:alexandwill56@gmail.com" aria-label="Email" data-testid="social-email"><i class="fas fa-envelope"></i></a>
+                  
+    <img src="assets/images/booking.webp" alt="Book on Booking.com — 43 The Annexe" style="width:35%;height:auto;" loading="lazy">
+</a>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <nav aria-label="Information links">
-                        <h3 class="text-teal mb-3">Info</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="footer-link">Booking</a></li>
-                            <li><a href="#" class="footer-link">Cancellation</a></li>
-                            <li><a href="#" class="footer-link">Privacy</a></li>
-                            <li><a href="#" class="footer-link">Terms</a></li>
-                        </ul>
-                    </nav>
+                <div class="col-6 col-lg-2">
+                    <h6>Explore</h6>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">The Studio</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#crantock">Crantock</a></li>
+                        <li><a href="#cornwall">Cornwall</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <h3 class="text-teal mb-3">Get in Touch</h3>
+                <div class="col-6 col-lg-2">
+                    <h6>Stay</h6>
+                    <ul>
+                        <li><a href="#contact">Book</a></li>
+                        <li><a href="#location">Find Us</a></li>
+                        <li><a href="https://www.booking.com/hotel/gb/annexe-newquay.en-gb.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaFCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvbKlNEGwAIB0gIkMTllMDEwNTEtNzUzOC00YzM4LWFhMjYtMmVkYzA3ZmVjNTMw2AIB4AIB&sid=0f90560e0f00d450f8a133c688f1a371&all_sr_blocks=712831001_298141050_2_0_0&checkin=2026-10-08&checkout=2026-10-11&dest_id=-2604050&dest_type=city&group_adults=2&group_children=0&hapos=21&highlighted_blocks=712831001_298141050_2_0_0&hpos=21&keep_landing=1&matching_block_id=712831001_298141050_2_0_0&nflt=ht_id%3D201&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=712831001_298141050_2_0_0__21600&srepoch=1780819205&srpvid=77b4388f3e5f010b&type=total&ucfs=1&chal_t=1781803374442&force_referer=#important_info" target="_blank" rel="noopener noreferrer">Legal Information</a></li>
+                        <li><a href="https://www.booking.com/hotel/gb/annexe-newquay.en-gb.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaFCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvbKlNEGwAIB0gIkMTllMDEwNTEtNzUzOC00YzM4LWFhMjYtMmVkYzA3ZmVjNTMw2AIB4AIB&sid=0f90560e0f00d450f8a133c688f1a371&all_sr_blocks=712831001_298141050_2_0_0&checkin=2026-10-08&checkout=2026-10-11&dest_id=-2604050&dest_type=city&group_adults=2&group_children=0&hapos=21&highlighted_blocks=712831001_298141050_2_0_0&hpos=21&keep_landing=1&matching_block_id=712831001_298141050_2_0_0&nflt=ht_id%3D201&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=712831001_298141050_2_0_0__21600&srepoch=1780819205&srpvid=77b4388f3e5f010b&type=total&ucfs=1&chal_t=1781803374442&force_referer=#tab-reviews" target="_blank" rel="noopener noreferrer">Guest Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6>Get in Touch</h6>
                     <address>
-                        <p class="mb-2">
-                            <i class="fas fa-phone text-teal me-2" aria-hidden="true"></i>
-                            <a href="tel:+447729735861" class="footer-link">+44 (0)7729 735 861</a>
-                        </p>
-                        <p class="mb-2">
-                            <i class="fas fa-envelope text-teal me-2" aria-hidden="true"></i>
-                            <a href="mailto:alexandwill56@gmail.com" class="footer-link">alexandwill56@gmail.com</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-map-marker-alt text-teal me-2" aria-hidden="true"></i>
-                            43 The Annexe, Crantock, Cornwall TR8 5RY
-                        </p>
+                        <p><i class="fas fa-map-marker-alt"></i> Crantock, Cornwall, TR8 5RY</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+447729735861">+44 (0)7729 735 861</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:alexandwill56@gmail.com">alexandwill56@gmail.com</a></p>
                     </address>
                 </div>
             </div>
 
-            <hr class="border-secondary">
-            
-
+        
                   <div class="footer-bottom text-center">
         <p>&copy; 2026 Made with love by <a class="footer-credit-link" href="https://verityallison.co.uk" rel="noopener noreferrer" target="_blank">Verity Allison</a> exclusively for 43 Annexe. All rights reserved.</p>
       </div>

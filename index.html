@@ -17,6 +17,9 @@
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -315,6 +318,19 @@
                 <p class="section-sub text-white-70">Crantock sits between Cornwall's surf coast and inland valleys. A 30 minute drive opens up most of the duchy.</p>
             </div>
 
+            <div class="cornwall-map-shell mb-5">
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-3 align-items-md-end mb-3">
+                    <div>
+                        <p class="eyebrow eyebrow-light mb-2">Interactive map</p>
+                        <h3 class="cornwall-map-title">Tap a pin to open the matching place card.</h3>
+                    </div>
+                    <p class="cornwall-map-note m-0">The map and the cards below stay linked, so you can browse either way.</p>
+                </div>
+                <div id="cornwallMap" class="cornwall-map" aria-label="Interactive map of Cornwall destinations" role="application">
+                    <div class="cornwall-map-fallback">Loading the Cornwall map...</div>
+                </div>
+            </div>
+
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <article class="dest-card" data-testid="dest-newquay">
@@ -482,6 +498,7 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <!-- Custom JavaScript -->
     <script src="assets/js/script.js"></script>

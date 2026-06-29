@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initReveal();
     initMobileNavClose();
     initYear();
+    initCornwallMap();
     initWeatherForecast();
 });
 
@@ -54,6 +55,7 @@ function initReveal() {
     const selectors = [
         '.section-about .col-lg-6',
         '.section-gallery .annexe-carousel',
+        '.cornwall-map-shell',
         '.chip-card',
         '.info-tile',
         '.story-card',
@@ -98,6 +100,137 @@ function initMobileNavClose() {
 function initYear() {
     const el = document.getElementById('year');
     if (el) el.textContent = new Date().getFullYear();
+}
+
+/* --- Cornwall map --- */
+function initCornwallMap() {
+    const mapElement = document.getElementById('cornwallMap');
+    if (!mapElement || !window.L) return;
+
+    const places = [
+        { selector: '[data-testid="dest-newquay"]', lat: 50.4154, lng: -5.0788 },
+        { selector: '[data-testid="dest-padstow"]', lat: 50.5397, lng: -5.0131 },
+        { selector: '[data-testid="dest-stives"]', lat: 50.2100, lng: -5.4829 },
+        { selector: '[data-testid="dest-eden"]', lat: 50.3601, lng: -4.7441 },
+        { selector: '[data-testid="dest-bedruthan"]', lat: 50.4910, lng: -5.0276 },
+        { selector: '[data-testid="dest-truro"]', lat: 50.2632, lng: -5.0510 },
+        { selector: '[data-testid="dest-tintagel"]', lat: 50.6635, lng: -4.7500 },
+        { selector: '[data-testid="dest-lostlands"]', lat: 50.2975, lng: -4.7921 }
+    ];
+
+    const map = L.map(mapElement, {
+        scrollWheelZoom: false,
+        zoomControl: true,
+        attributionControl: true
+    }).setView([50.35, -4.95], 8);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const pinIcon = L.divIcon({
+        className: 'cornwall-pin-icon',
+        html: '<span class="cornwall-pin" aria-hidden="true"></span>',
+        iconSize: [16, 16],
+        iconAnchor: [8, 16],
+        popupAnchor: [0, -18]
+    });
+
+    const homeIcon = L.divIcon({
+        className: 'cornwall-home-icon',
+        html: '<span class="cornwall-home-pin" aria-hidden="true"></span>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 18],
+        popupAnchor: [0, -20]
+    });
+
+    const homeLat = 50.4162;
+    const homeLng = -5.1104;
+    const homeMarker = L.marker([homeLat, homeLng], {
+        icon: homeIcon,
+        zIndexOffset: 1000
+    }).addTo(map);
+    homeMarker.bindTooltip('We are here', {
+        permanent: true,
+        direction: 'top',
+        offset: [0, -12],
+        className: 'cornwall-home-tooltip',
+        opacity: 1
+    });
+
+    const cardMap = new Map();
+    const bounds = [];
+    bounds.push([homeLat, homeLng]);
+
+    places.forEach(place => {
+        const card = document.querySelector(place.selector);
+        if (!card) return;
+
+        const titleEl = card.querySelector('h4');
+        const distanceEl = card.querySelector('.dest-distance');
+        const summaryEl = card.querySelector('p');
+        const title = titleEl ? titleEl.textContent.trim() : 'Place';
+        const distance = distanceEl ? distanceEl.textContent.trim() : '';
+        const summary = summaryEl ? summaryEl.textContent.trim() : '';
+
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `Open map pin for ${title}`);
+
+        const marker = L.marker([place.lat, place.lng], { icon: pinIcon }).addTo(map);
+        marker.bindPopup(createPopupContent(title, distance, summary), {
+            className: 'cornwall-popup',
+            maxWidth: 280,
+            closeButton: false,
+            autoPanPadding: [30, 30]
+        });
+
+        const selectPlace = () => {
+            setActiveCornwallCard(cardMap, card);
+            marker.openPopup();
+            map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 8), { duration: 0.55 });
+        };
+
+        marker.on('click', selectPlace);
+        card.addEventListener('click', selectPlace);
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                selectPlace();
+            }
+        });
+
+        cardMap.set(card, marker);
+        bounds.push([place.lat, place.lng]);
+    });
+
+    if (bounds.length) {
+        map.fitBounds(bounds, { padding: [30, 30] });
+    }
+
+    map.on('popupopen', (event) => {
+        for (const [card, marker] of cardMap.entries()) {
+            if (marker.getPopup() === event.popup) {
+                setActiveCornwallCard(cardMap, card);
+                break;
+            }
+        }
+    });
+}
+
+function createPopupContent(title, distance, summary) {
+    return `
+        <span class="popup-title">${title}</span>
+        <span class="popup-distance">${distance}</span>
+        <p class="popup-copy">${summary}</p>
+    `;
+}
+
+function setActiveCornwallCard(cardMap, activeCard) {
+    cardMap.forEach((marker, card) => {
+        card.classList.toggle('is-active', card === activeCard);
+    });
 }
 
 /* --- Weather forecast --- */
